@@ -1,0 +1,605 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+.colored {
+  color: #e31b6d;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: black;
+  background-image: url("../img/herobg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .welcome-text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  line-height: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.hero .welcome-text .h1 {
+  font-size: 3.5em;
+}
+
+.hero .welcome-text .h2 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+.hero .welcome-text .my-work-btn {
+  border: 3px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.7em 1.4em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms, border 250ms;
+  transition: background-color 250ms, border 250ms;
+  text-decoration: none;
+}
+
+.hero .welcome-text .my-work-btn:hover {
+  background-color: #00f7ff;
+  border: 3px solid #00f7ff;
+}
+
+.hero .welcome-text .my-work-btn .arrow {
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+  width: 32px;
+  margin-left: 1em;
+}
+
+.hero .welcome-text .my-work-btn:hover .arrow {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.navigation {
+  background-color: #1b242f;
+  border-bottom: 3px solid #04c2c9;
+}
+
+.navigation .navigation-list {
+  list-style-type: none;
+  padding: 0.7em 0;
+}
+
+.navigation .navigation-list a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navigation .navigation-list__item {
+  display: inline-block;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: color 500ms;
+  transition: color 500ms;
+  margin-right: 1em;
+}
+
+.navigation .navigation-list__item--active {
+  color: #e31b6d;
+}
+
+.navigation .navigation-list__item:hover {
+  color: #e31b6d;
+}
+
+.portfolio {
+  background-color: #e6e6e6;
+  padding: 5em 0;
+}
+
+.portfolio .h1 {
+  color: #444649;
+  text-transform: uppercase;
+  font-size: 2.8em;
+  position: relative;
+  text-align: center;
+}
+
+.portfolio .h1::after {
+  position: absolute;
+  width: 6%;
+  height: 4px;
+  background-color: #444649;
+  content: "";
+  display: block;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.portfolio .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.portfolio .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5em 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.portfolio .filters__btn {
+  cursor: pointer;
+  margin: 0 5em;
+  border: none;
+  color: #616161;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  padding: 0.5em 2em;
+  -webkit-transition: background-color 500ms, color 500ms;
+  transition: background-color 500ms, color 500ms;
+  background-color: transparent;
+}
+
+.portfolio .filters__btn--active {
+  background-color: #e31b6d;
+  color: #fff;
+}
+
+.portfolio .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+  justify-items: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.portfolio .grid__item {
+  width: 400px;
+  height: 350px;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.about {
+  padding: 5em 0;
+}
+
+.about .h1 {
+  color: #444649;
+  text-transform: uppercase;
+  font-size: 2.8em;
+  position: relative;
+  text-align: center;
+}
+
+.about .h1::after {
+  position: absolute;
+  width: 6%;
+  height: 4px;
+  background-color: #444649;
+  content: "";
+  display: block;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.about .about-my-work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 6em 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .about-my-work__item {
+  max-width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #616161;
+  text-align: center;
+  padding: 2em 0.8em;
+}
+
+.about .about-my-work__item .hexa {
+  background-color: #04c2c9;
+  -webkit-clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+          clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+  position: relative;
+  width: 110px;
+  height: 95px;
+  margin-bottom: 1.5em;
+}
+
+.about .about-my-work__item img {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.about .about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #616161;
+}
+
+.about .about-me__left {
+  width: 50%;
+  padding: 3em 4.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.about .about-me__left .me {
+  margin: 1em 0 1.5em;
+}
+
+.about .about-me__left .h2 {
+  margin-bottom: 0.5em;
+}
+
+.about .about-me__left a {
+  text-decoration: none;
+}
+
+.about .about-me__left .colored {
+  cursor: pointer;
+}
+
+.about .about-me__right {
+  width: 50%;
+  padding: 0 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.about .about-me .right__item {
+  width: 80%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #e6e6e6;
+}
+
+.about .about-me .skill-name {
+  background-color: #04c2c9;
+  color: #fff;
+  font-weight: bold;
+  min-width: 100px;
+  text-align: center;
+  padding: 3px 0;
+  z-index: 1;
+}
+
+.about .about-me .filling {
+  background-color: #009fa5;
+  width: 100%;
+}
+
+.about .about-me .percentage {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  background-color: #e6e6e6;
+  height: 100%;
+}
+
+.about .about-me .percentageh {
+  text-align: center;
+  width: 100px !important;
+}
+
+.about .percentagec {
+  text-align: center;
+  width: 150px !important;
+}
+
+.about .percentagej {
+  text-align: center;
+  width: 400px !important;
+}
+
+.about .vue {
+  position: relative;
+}
+
+.about .vue::before {
+  position: absolute;
+  content: "In progress...";
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.contact {
+  background-color: #252934;
+  -webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+          clip-path: polygon(50% 10%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+  position: relative;
+  min-height: 800px;
+}
+
+.contact-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.contact-text .h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.8em;
+  position: relative;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.contact-text .h1::after {
+  position: absolute;
+  width: 20%;
+  height: 4px;
+  background-color: #fff;
+  content: "";
+  display: block;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.contact-text .p {
+  color: #04c2c9;
+  margin-bottom: 2em;
+  font-weight: bold;
+}
+
+.contact-text .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-text .form .name,
+.contact-text .form .email,
+.contact-text .form .textarea {
+  background-color: #1e242c;
+  color: #fff;
+  margin: 2px 0;
+  padding: 0.6em;
+  width: 500px;
+  border: none;
+}
+
+.contact-text .form .name::-webkit-input-placeholder,
+.contact-text .form .email::-webkit-input-placeholder,
+.contact-text .form .textarea::-webkit-input-placeholder {
+  font-family: "Raleway", sans-serif;
+}
+
+.contact-text .form .name:-ms-input-placeholder,
+.contact-text .form .email:-ms-input-placeholder,
+.contact-text .form .textarea:-ms-input-placeholder {
+  font-family: "Raleway", sans-serif;
+}
+
+.contact-text .form .name::-ms-input-placeholder,
+.contact-text .form .email::-ms-input-placeholder,
+.contact-text .form .textarea::-ms-input-placeholder {
+  font-family: "Raleway", sans-serif;
+}
+
+.contact-text .form .name::placeholder,
+.contact-text .form .email::placeholder,
+.contact-text .form .textarea::placeholder {
+  font-family: "Raleway", sans-serif;
+}
+
+.contact-text .form .textarea {
+  resize: none;
+}
+
+.contact-text .form .submit-btn {
+  background-color: transparent;
+  border: 3px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 0.8em 2em;
+  margin: 5px 0;
+  -webkit-transition: background-color 500ms, border 500ms;
+  transition: background-color 500ms, border 500ms;
+  font-weight: bold;
+}
+
+.contact-text .form .submit-btn:hover {
+  background-color: #00f7ff;
+  border: 3px solid #00f7ff;
+}
+
+.footer {
+  background-color: #1b242f;
+  padding: 5em 0 3em;
+  text-align: center;
+  position: relative;
+}
+
+.footer .go-top {
+  position: absolute;
+  background-color: #e31b6d;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  left: 50%;
+  top: -10%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.footer .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2em 0;
+}
+
+.footer .socials__item {
+  margin: 0 1.5em;
+  cursor: pointer;
+  background-color: #262f38;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+
+.footer .socials__item img {
+  width: 25px;
+  height: 25px;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+
+.footer .socials__item:hover,
+.footer .socials__item:hover img {
+  background-color: #00f7ff;
+}
+
+.footer .outro {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #444649;
+}
+/*# sourceMappingURL=style.css.map */

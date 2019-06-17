@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Boris Bošnjak">
+    <meta name="description" content="Welcome to my portfolio website.I am a young front end
+    web developer from Serbia">
+    <meta name="keywords"
+        content="front end, web, developer, HTML, CSS, SCSS, JavaScript, BEM, portfolio, responsive design, Serbia, junior">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Bokismoki | Web Developer</title>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="welcome-text">
+                <h1 class="h1">Welcome, I'm <span class="colored">Boris Bošnjak</span>.</h1>
+                <h2 class="h2">I'm a front end web developer.</h2>
+                <a href="#portfolio" class="my-work-btn">View my work <img src="./img/arrow.png" class="arrow"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NAVIGATION -->
+    <nav class="navigation" id="navigation">
+        <div class="container">
+            <ul class="navigation-list">
+                <a href="#hero">
+                    <li class="navigation-list__item navigation-list__item--active" id="li1">Home</li>
+                </a>
+                <a href="#portfolio">
+                    <li class="navigation-list__item" id="li2">Portfolio</li>
+                </a>
+                <a href="#about">
+                    <li class="navigation-list__item" id="li3">About</li>
+                </a>
+                <a href="#contact">
+                    <li class="navigation-list__item" id="li4">Contact</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h1 class="h1">Projects</h1>
+            <div class="flex">
+                <div class="filters">
+                    <button class="filters__btn filters__btn--active btn1">All</button>
+                    <button class="filters__btn btn2">Html/Css</button>
+                    <button class="filters__btn btn3">Js</button>
+                </div>
+                <div class="grid">
+                    <div class="grid__item all html-g">(TEST) ALL HTML/CSS</div>
+                    <div class="grid__item all js-g">(TEST) ALL JS</div>
+                    <div class="grid__item all js-g">(TEST) ALL JS</div>
+                    <div class="grid__item all html-g">(TEST) ALL HTML/CSS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="container">
+            <h1 class="h1">About</h1>
+            <div class="about-my-work">
+                <div class="about-my-work__item">
+                    <div class="hexa">
+                        <img src="./img/fast.png">
+                    </div>
+                    <h2>Fast</h2>
+                    <p>Fast load time and lag free interaction are one of my highes priorities.</p>
+                </div>
+                <div class="about-my-work__item">
+                    <div class="hexa">
+                        <img src="./img/responsive.png">
+                    </div>
+                    <h2>Responsive</h2>
+                    <p>My layout will work on any device, big or small.</p>
+                </div>
+                <div class="about-my-work__item">
+                    <div class="hexa">
+                        <img src="./img/dynamic.png">
+                    </div>
+                    <h2>Dynamic</h2>
+                    <p>Websites don't have to be static. I love making pages come to life.</p>
+                </div>
+                <div class="about-my-work__item">
+                    <div class="hexa">
+                        <img src="./img/new.png">
+                    </div>
+                    <h2>Modern</h2>
+                    <p>Every project is made using 100% modern technologies.</p>
+                </div>
+            </div>
+            <div class="about-me">
+                <div class="about-me__left">
+                    <img src="https://via.placeholder.com/300x250" class="me">
+                    <h2 class="h2">Who am I?</h2>
+                    <p class="p">
+                        I'm a 19 year-old Front-End Web Developer from Serbia.
+                        I have serious passion for creating web sites using the modern technologies available to us
+                        today.
+                        <a href="#contact" <span class="colored">Contact me if you want to work together</span></a>.
+                    </p>
+                </div>
+                <div class="about-me__right">
+                    <div class="right__item">
+                        <div class="skill-name">HTML</div>
+                        <div class="filling html"></div>
+                        <div class="percentageh">95%</div>
+                    </div>
+                    <div class="right__item">
+                        <div class="skill-name">CSS</div>
+                        <div class="filling css"></div>
+                        <div class="percentagec">90%</div>
+                    </div>
+                    <div class="right__item">
+                        <div class="skill-name">JS</div>
+                        <div class="filling js"></div>
+                        <div class="percentagej">65%</div>
+                    </div>
+                    <div class="right__item">
+                        <div class="skill-name">VUE</div>
+                        <div class="filling vue"></div>
+                    </div>
+                    <div class="right__item">
+                        <div class="skill-name">SCSS</div>
+                        <div class="filling"></div>
+                    </div>
+                    <div class="right__item">
+                        <div class="skill-name">GIT</div>
+                        <div class="filling"></div>
+                    </div>
+                    <div class="right__item">
+                        <div class="skill-name">BEM</div>
+                        <div class="filling"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-text">
+                <h1 class="h1">Contact</h1>
+                <p class="p">Have a question or want to work together?</p>
+                <form class="form">
+                    <input type="text" class="name" placeholder="Name">
+                    <input type="email" class="email" placeholder="Enter Email">
+                    <textarea cols="30" rows="10" placeholder="Your Message" class="textarea"></textarea>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="#hero">
+            <div class="go-top">
+                <img src="./img/double-chevron.png" class="double-chevron">
+            </div>
+        </a>
+        <div class="container">
+            <div class="socials">
+                <a href="https://github.com/bokismoki" target="_blank">
+                    <div class="socials__item">
+                        <img src="./img/github.png" class="socials__item">
+                    </div>
+                </a>
+                <a href="https://twitter.com/BorisBosnjak6" target="_blank">
+                    <div class="socials__item">
+                        <img src="./img/twitter.png" class="socials__item">
+                    </div>
+                </a>
+                <a href="https://codepen.io/bokismoki99/#" target="_blank">
+                    <div class="socials__item">
+                        <img src="./img/codepen.png" class="socials__item">
+                    </div>
+                </a>
+            </div>
+            <h5 class="outro">Boris Bošnjak <span class="colored">&copy;2019</span></h5>
+        </div>
+    </footer>
+
+
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
