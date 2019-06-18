@@ -1,4 +1,4 @@
-// FIXED NAV AFTER VIEW IS ON PORTFOLIO
+// FIXED NAV AFTER VIEW IS ON PORTFOLIO SECTION
 const nav = document.querySelector(".navigation");
 const hero = document.querySelector(".hero");
 const portfolio = document.querySelector(".portfolio");
@@ -27,7 +27,7 @@ document.addEventListener("scroll", e => {
     }
 
     // PORTFOLIO BOUNDING
-    if (positionPortfolio.y <= 0) {
+    if (positionPortfolio.y <= 10) {
 
         li2.classList.add("navigation-list__item--active");
         li1.classList.remove("navigation-list__item--active");
@@ -37,7 +37,7 @@ document.addEventListener("scroll", e => {
     }
 
     // ABOUT BOUNDING
-    if (positionAbout.y <= 0) {
+    if (positionAbout.y <= 10) {
 
         li3.classList.add("navigation-list__item--active");
         li1.classList.remove("navigation-list__item--active");
@@ -132,3 +132,12 @@ filtersBtn.forEach(btn => {
 });
 
 
+// HAMBURGER TOGGLER 
+const hamburger = document.querySelector(".hamburger");
+const navigation = document.querySelector(".navigation-list");
+
+hamburger.addEventListener("click", () => {
+
+    navigation.classList.toggle("show");
+
+});

@@ -1,3 +1,5 @@
+@import "variables";
+
 *,
 *::before,
 *::after {
@@ -15,7 +17,7 @@ body {
   font-size: 14px;
   font-family: "Raleway", sans-serif;
   overflow-x: hidden;
-  color: #fff;
+  color: $white;
 }
 
 .container {
@@ -28,7 +30,7 @@ img {
 }
 
 .colored {
-  color: #e31b6d;
+  color: $crimson;
 }
 
 // HERO
@@ -36,7 +38,7 @@ img {
   width: 100vw;
   height: 100vh;
   position: relative;
-  background-color: black;
+  background-color: #000;
   background-image: url("../img/herobg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -56,6 +58,7 @@ img {
 
     .h1 {
       font-size: 3.5em;
+      margin-bottom: 0.5em;
     }
 
     .h2 {
@@ -64,9 +67,9 @@ img {
     }
 
     .my-work-btn {
-      border: 3px solid #fff;
+      border: 3px solid $white;
       background-color: transparent;
-      color: #fff;
+      color: $white;
       font-size: 1.2em;
       letter-spacing: 1px;
       display: flex;
@@ -78,8 +81,8 @@ img {
       text-decoration: none;
 
       &:hover {
-        background-color: #00f7ff;
-        border: 3px solid #00f7ff;
+        background-color: $aqua;
+        border: 3px solid $aqua;
       }
 
       .arrow {
@@ -97,15 +100,15 @@ img {
 
 // NAVIGATION
 .navigation {
-  background-color: #1b242f;
-  border-bottom: 3px solid #04c2c9;
+  background-color: $blackblue;
+  border-bottom: 3px solid $lightblue;
 
   .navigation-list {
     list-style-type: none;
     padding: 0.7em 0;
 
     a {
-      color: #fff;
+      color: $white;
       text-decoration: none;
     }
 
@@ -118,23 +121,27 @@ img {
       margin-right: 1em;
 
       &--active {
-        color: #e31b6d;
+        color: $crimson;
       }
 
       &:hover {
-        color: #e31b6d;
+        color: $crimson;
       }
     }
+  }
+
+  .hamburger {
+    display: none;
   }
 }
 
 // PORTFOLIO
 .portfolio {
-  background-color: rgb(230, 230, 230);
+  background-color: $lightgray;
   padding: 5em 0;
 
   .h1 {
-    color: #444649;
+    color: $darkergray;
     text-transform: uppercase;
     font-size: 2.8em;
     position: relative;
@@ -142,9 +149,9 @@ img {
 
     &::after {
       position: absolute;
-      width: 6%;
+      width: 90px;
       height: 4px;
-      background-color: #444649;
+      background-color: $darkergray;
       content: "";
       display: block;
       left: 50%;
@@ -166,7 +173,7 @@ img {
       cursor: pointer;
       margin: 0 5em;
       border: none;
-      color: rgb(97, 97, 97);
+      color: $darkgray;
       text-transform: uppercase;
       font-size: 1.3em;
       padding: 0.5em 2em;
@@ -174,8 +181,8 @@ img {
       background-color: transparent;
 
       &--active {
-        background-color: #e31b6d;
-        color: #fff;
+        background-color: $crimson;
+        color: $white;
       }
     }
   }
@@ -186,12 +193,68 @@ img {
     grid-gap: 1em;
     justify-items: center;
     align-self: center;
-    
+
     &__item {
+      max-width: 400px;
       width: 400px;
       height: 350px;
-      background-color: gray;
+      background-color: #808080;
       cursor: pointer;
+      position: relative;
+
+      &:first-child,
+      &:last-child {
+        background-image: url("../img/project1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        background-image: url("../img/project2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &:hover .grid-overlay {
+        opacity: 1;
+      }
+    }
+
+    &-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $blackblue;
+      opacity: 0;
+      transition: opacity 500ms;
+
+      &__h2 {
+        text-transform: uppercase;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &__explore-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        border: 3px solid $crimson;
+        padding: 0.5em 1em;
+        transition: background-color 500ms;
+
+        &:hover {
+          background-color: $crimson;
+        }
+      }
     }
   }
 }
@@ -201,7 +264,7 @@ img {
   padding: 5em 0;
 
   .h1 {
-    color: #444649;
+    color: $darkergray;
     text-transform: uppercase;
     font-size: 2.8em;
     position: relative;
@@ -209,9 +272,9 @@ img {
 
     &::after {
       position: absolute;
-      width: 6%;
+      width: 90px;
       height: 4px;
-      background-color: #444649;
+      background-color: $darkergray;
       content: "";
       display: block;
       left: 50%;
@@ -230,12 +293,12 @@ img {
       flex-direction: column;
       justify-self: center;
       align-items: center;
-      color: rgb(97, 97, 97);
+      color: $darkgray;
       text-align: center;
       padding: 2em 0.8em;
 
       .hexa {
-        background-color: #04c2c9;
+        background-color: $lightblue;
         clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
         position: relative;
         width: 110px;
@@ -255,7 +318,7 @@ img {
 
   .about-me {
     display: flex;
-    color: rgb(97, 97, 97);
+    color: $darkgray;
 
     &__left {
       width: 50%;
@@ -295,12 +358,16 @@ img {
       width: 80%;
       position: relative;
       display: flex;
-      background-color: rgb(230, 230, 230);
+      cursor: pointer;
+
+      &:hover .skill-logo {
+        filter: grayscale(0%);
+      }
     }
 
     .skill-name {
-      background-color: #04c2c9;
-      color: #fff;
+      background-color: $lightblue;
+      color: $white;
       font-weight: bold;
       min-width: 100px;
       text-align: center;
@@ -313,40 +380,24 @@ img {
       width: 100%;
     }
 
-    .percentage {
-      position: absolute;
-      z-index: 1;
-      right: 0;
-      background-color: rgb(230, 230, 230);
-      height: 100%;
+    .skill-logo {
+      background-color: $white;
+      padding: 0 1em;
+      filter: grayscale(100%);
+      transition: filter 250ms, background-color 250ms;
     }
 
-    .percentageh {
-      text-align: center;
-      width: 100px !important;
-    }
-  }
+    .vue {
+      position: relative;
 
-  .percentagec {
-    text-align: center;
-    width: 150px !important;
-  }
-
-  .percentagej {
-    text-align: center;
-    width: 400px !important;
-  }
-
-  .vue {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: "In progress...";
-      color: #fff;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      &::before {
+        position: absolute;
+        content: "In progress...";
+        color: $white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }
@@ -366,7 +417,7 @@ img {
     text-align: center;
 
     .h1 {
-      color: #fff;
+      color: $white;
       text-transform: uppercase;
       font-size: 2.8em;
       position: relative;
@@ -375,9 +426,9 @@ img {
 
       &::after {
         position: absolute;
-        width: 20%;
+        width: 90px;
         height: 4px;
-        background-color: #fff;
+        background-color: $white;
         content: "";
         display: block;
         left: 50%;
@@ -386,7 +437,7 @@ img {
     }
 
     .p {
-      color: #04c2c9;
+      color: $lightblue;
       margin-bottom: 2em;
       font-weight: bold;
     }
@@ -398,8 +449,8 @@ img {
       .name,
       .email,
       .textarea {
-        background-color: #1e242c;
-        color: #fff;
+        background-color: #1a242c;
+        color: $white;
         margin: 2px 0;
         padding: 0.6em;
         width: 500px;
@@ -416,8 +467,8 @@ img {
 
       .submit-btn {
         background-color: transparent;
-        border: 3px solid #fff;
-        color: #fff;
+        border: 3px solid $white;
+        color: $white;
         cursor: pointer;
         align-self: flex-end;
         padding: 0.8em 2em;
@@ -426,8 +477,8 @@ img {
         font-weight: bold;
 
         &:hover {
-          background-color: #00f7ff;
-          border: 3px solid #00f7ff;
+          background-color: $aqua;
+          border: 3px solid $aqua;
         }
       }
     }
@@ -436,14 +487,14 @@ img {
 
 // FOOTER
 .footer {
-  background-color: #1b242f;
+  background-color: $blackblue;
   padding: 5em 0 3em;
   text-align: center;
   position: relative;
 
   .go-top {
     position: absolute;
-    background-color: #e31b6d;
+    background-color: $crimson;
     width: 50px;
     height: 50px;
     display: flex;
@@ -479,7 +530,7 @@ img {
 
       &:hover,
       &:hover img {
-        background-color: #00f7ff;
+        background-color: $aqua;
       }
     }
   }
@@ -487,6 +538,248 @@ img {
   .outro {
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: #444649;
+    color: $darkergray;
+  }
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 1150px) {
+  .portfolio {
+    .container {
+      width: 100%;
+    }
+
+    .filters {
+      &__btn {
+        margin: 0 2.5em;
+      }
+    }
+  }
+
+  .about {
+    .container {
+      width: 100%;
+    }
+  }
+
+  .contact {
+    .container {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hero .welcome-text {
+    padding: 0 2.5em 0 1.5em;
+
+    .h1 {
+      font-size: 2.5em;
+    }
+
+    .h2 {
+      font-size: 1.8em;
+    }
+
+    .my-work-btn {
+      font-size: 1em;
+    }
+  }
+
+  .portfolio {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .about {
+    &-my-work {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 5em;
+
+      &__item {
+        p {
+          width: 350px;
+        }
+      }
+    }
+
+    &-me {
+      flex-direction: column;
+
+      &__left {
+        width: 100% !important;
+        padding: 0 4.3em 4em !important;
+      }
+
+      &__right {
+        width: 100% !important;
+        align-items: center;
+      }
+
+      .right__item {
+        margin: 1em 0;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 760px) {
+  .about {
+    &-my-work__item {
+      p {
+        width: 200px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 610px) {
+  .hero .welcome-text {
+    .h1 {
+      font-size: 1.6em;
+    }
+
+    .h2 {
+      font-size: 1.2em;
+    }
+
+    .my-work-btn {
+      font-size: 0.8em;
+    }
+  }
+
+  .navigation {
+    .container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &-list {
+      height: 0;
+      overflow: hidden;
+      flex-direction: column;
+      align-self: flex-start;
+      padding: 0 !important;
+      transition: all 500ms;
+
+      &__item {
+        margin: 5px 0;
+        width: 100vw;
+        padding: 10px 0;
+      }
+    }
+
+    .show {
+      height: 265.6px;
+      padding: 0.7em 0 !important;
+    }
+
+    .hamburger {
+      cursor: pointer;
+      display: flex;
+      padding: 10px;
+    }
+  }
+
+  .portfolio {
+    .filters__btn {
+      margin: 0;
+    }
+  }
+
+  .contact {
+    .form {
+      .name,
+      .email,
+      .textarea {
+        width: 90vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .portfolio {
+    .h1 {
+      font-size: 2em;
+    }
+
+    .filters {
+      flex-direction: column;
+      margin-bottom: 1em;
+
+      &__btn {
+        width: 50%;
+        align-self: center;
+        margin: 0.3em 0;
+      }
+    }
+
+    .grid {
+      width: 100%;
+      justify-content: center;
+
+      &__item {
+        width: 100%;
+        max-height: 350px;
+        height: 250px;
+      }
+    }
+  }
+
+  .about {
+    .h1 {
+      font-size: 2em;
+    }
+
+    &-my-work__item {
+      .hexa {
+        width: 90px !important;
+        height: 75px !important;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+
+      p {
+        font-size: 0.9em;
+        width: 110px;
+      }
+    }
+
+    &-me__right {
+      .right__item {
+        .skill-name {
+          width: 100%;
+        }
+
+        .filling {
+          display: none;
+        }
+
+        .skill-logo {
+          display: none;
+        }
+
+        .vue::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .contact {
+    .h1 {
+      font-size: 2em;
+    }
+
+    .p {
+      font-size: 0.9em;
+    }
   }
 }
