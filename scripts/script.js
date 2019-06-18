@@ -57,22 +57,48 @@ document.addEventListener("scroll", e => {
     }
 
     // FIX NAV
-    if (positionPortfolio.y <= 50) {
+    const navigationList = document.querySelector(".navigation-list");
 
-        nav.style.position = "fixed";
-        nav.style.top = "0px";
-        nav.style.width = "100vw";
-        nav.style.zIndex = "2";
-        hero.style.height = "105vh";
+    console.log(positionPortfolio);
 
-    } else if (positionPortfolio.y >= 0) {
+    if (navigationList.className === "navigation-list show") {
 
-        nav.style.position = "relative";
-        hero.style.height = "100vh";
+        if (positionPortfolio.y <= 250) {
+
+            nav.style.position = "fixed";
+            nav.style.top = "0px";
+            nav.style.width = "100vw";
+            nav.style.zIndex = "2";
+            hero.style.height = "120vh";
+
+        } else if (positionPortfolio.y >= -250) {
+
+            nav.style.position = "relative";
+            hero.style.height = "100vh";
+
+        }
+
+    } else if (navigationList.className === "navigation-list") {
+
+        if (positionPortfolio.y <= 50) {
+
+            nav.style.position = "fixed";
+            nav.style.top = "0px";
+            nav.style.width = "100vw";
+            nav.style.zIndex = "2";
+            hero.style.height = "105vh";
+
+        } else if (positionPortfolio.y >= 0) {
+
+            nav.style.position = "relative";
+            hero.style.height = "100vh";
+
+        }
 
     }
 
 })
+
 
 // PROJECTS FILTER
 const filtersBtn = document.querySelectorAll(".filters button");

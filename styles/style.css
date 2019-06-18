@@ -157,6 +157,7 @@ img {
 .portfolio {
   background-color: #e6e6e6;
   padding: 5em 0;
+  overflow: hidden;
 }
 
 .portfolio .h1 {
@@ -294,7 +295,10 @@ img {
 }
 
 .about {
+  border-top: 2px solid #fff;
   padding: 5em 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#fff));
+  background: linear-gradient(to bottom, #e6e6e6 0%, #fff 100%);
 }
 
 .about .h1 {
@@ -721,6 +725,13 @@ img {
   }
   .about-me .right__item {
     margin: 1em 0;
+  }
+  .contact {
+    min-height: 600px;
+  }
+  .footer .socials__item {
+    width: 45px;
+    height: 45px;
   }
 }
 

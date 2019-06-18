@@ -140,6 +140,7 @@ img {
 .portfolio {
   background-color: $lightgray;
   padding: 5em 0;
+  overflow: hidden;
 
   .h1 {
     color: $darkergray;
@@ -262,7 +263,9 @@ img {
 
 // ABOUT
 .about {
+  border-top: 2px solid $white;
   padding: 5em 0;
+  background: linear-gradient(to bottom, $lightgray 0%, $white 100%);
 
   .h1 {
     color: $darkergray;
@@ -624,6 +627,17 @@ img {
       }
     }
   }
+
+  .contact {
+    min-height: 600px;
+  }
+
+  .footer {
+    .socials__item {
+      width: 45px;
+      height: 45px;
+    }
+  }
 }
 
 @media screen and(max-width: 760px) {
@@ -786,8 +800,6 @@ img {
 }
 
 @media screen and (min-width: 900px) {
-  
-
   .about {
     .skill-name {
       display: flex !important;
