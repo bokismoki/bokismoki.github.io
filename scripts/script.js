@@ -141,3 +141,11 @@ hamburger.addEventListener("click", () => {
     navigation.classList.toggle("show");
 
 });
+
+// ANIMATION
+window.addEventListener("load", () => {
+
+    document.querySelector(".hero .welcome-text").style.position = "relative";
+    document.querySelector(".hero .welcome-text").style.top = "50vh";
+
+});

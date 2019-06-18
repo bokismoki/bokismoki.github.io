@@ -10,6 +10,7 @@
     web developer from Serbia">
     <meta name="keywords"
         content="front end, web, developer, HTML, CSS, SCSS, JavaScript, BEM, portfolio, responsive design, Serbia, junior">
+    <link rel="stylesheet" href="animate.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Bokismoki | Web Developer</title>
@@ -54,7 +55,7 @@
     <!-- PORTFOLIO -->
     <section class="portfolio" id="portfolio">
         <div class="container">
-            <h1 class="h1">Projects</h1>
+            <h1 class="h1 wow fadeInRight">Projects</h1>
             <div class="flex">
                 <div class="filters">
                     <button class="filters__btn filters__btn--active btn1">All</button>
@@ -62,28 +63,28 @@
                     <button class="filters__btn btn3">Js</button>
                 </div>
                 <div class="grid">
-                    <div class="grid__item all html-g">
+                    <div class="grid__item all html-g wow slideInUp">
                         <div class="grid-overlay">
                             <h2 class="grid-overlay__h2">Website</h2>
                             <a href="https://github.com/bokismoki" target="_blank"
                                 class="grid-overlay__explore-btn">Explore</a>
                         </div>
                     </div>
-                    <div class="grid__item all js-g">
+                    <div class="grid__item all js-g wow slideInUp">
                         <div class="grid-overlay">
                             <h2 class="grid-overlay__h2">Web app</h2>
                             <a href="https://github.com/bokismoki" target="_blank"
                                 class="grid-overlay__explore-btn">Explore</a>
                         </div>
                     </div>
-                    <div class="grid__item all js-g">
+                    <div class="grid__item all js-g wow slideInUp">
                         <div class="grid-overlay">
                             <h2 class="grid-overlay__h2">Web app</h2>
                             <a href="https://github.com/bokismoki" target="_blank"
                                 class="grid-overlay__explore-btn">Explore</a>
                         </div>
                     </div>
-                    <div class="grid__item all html-g">
+                    <div class="grid__item all html-g wow slideInUp">
                         <div class="grid-overlay">
                             <h2 class="grid-overlay__h2">Website</h2>
                             <a href="https://github.com/bokismoki" target="_blank"
@@ -98,14 +99,15 @@
     <!-- ABOUT -->
     <section class="about" id="about">
         <div class="container">
-            <h1 class="h1">About</h1>
+            <h1 class="h1 wow fadeInRight">About</h1>
             <div class="about-my-work">
                 <div class="about-my-work__item">
                     <div class="hexa">
                         <img src="./img/fast.png">
                     </div>
                     <h2>Fast</h2>
-                    <p>Fast load time and lag free interaction are one of my highes priorities.</p>
+                    <p>Fast load time and lag free interaction are one of my highes
+                        priorities.</p>
                 </div>
                 <div class="about-my-work__item">
                     <div class="hexa">
@@ -184,7 +186,7 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="contact-text">
-                <h1 class="h1">Contact</h1>
+                <h1 class="h1 wow fadeInRight">Contact</h1>
                 <p class="p">Have a question or want to work together?</p>
                 <form class="form">
                     <input type="text" class="name" placeholder="Name">
@@ -228,6 +230,11 @@
 
 
     <script src="./scripts/script.js"></script>
+    <script src="wowjs/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+
 </body>
 
 </html>

@@ -47,7 +47,7 @@ img {
   .welcome-text {
     width: 100%;
     position: absolute;
-    top: 50%;
+    top: -50vh;
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1;
@@ -55,6 +55,7 @@ img {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: top 750ms;
 
     .h1 {
       font-size: 3.5em;
@@ -780,6 +781,19 @@ img {
 
     .p {
       font-size: 0.9em;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  
+
+  .about {
+    .skill-name {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      height: 32px;
     }
   }
 }
