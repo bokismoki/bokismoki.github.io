@@ -61,24 +61,7 @@ document.addEventListener("scroll", e => {
 
     console.log(positionPortfolio);
 
-    if (navigationList.className === "navigation-list show") {
-
-        if (positionPortfolio.y <= 250) {
-
-            nav.style.position = "fixed";
-            nav.style.top = "0px";
-            nav.style.width = "100vw";
-            nav.style.zIndex = "2";
-            hero.style.height = "120vh";
-
-        } else if (positionPortfolio.y >= -250) {
-
-            nav.style.position = "relative";
-            hero.style.height = "100vh";
-
-        }
-
-    } else if (navigationList.className === "navigation-list") {
+    if (navigationList.className === "navigation-list show" || navigationList.className === "navigation-list") {
 
         if (positionPortfolio.y <= 50) {
 
@@ -98,6 +81,17 @@ document.addEventListener("scroll", e => {
     }
 
 })
+
+// CLOSE NAV ON ITEM CLICK
+const navigationItems = document.querySelectorAll(".navigation-list__item");
+
+navigationItems.forEach(item => {
+    item.addEventListener("click", () => {
+
+        navigation.classList.toggle("show");
+
+    });
+});
 
 
 // PROJECTS FILTER
