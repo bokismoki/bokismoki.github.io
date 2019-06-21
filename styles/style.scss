@@ -200,24 +200,38 @@ img {
       max-width: 400px;
       width: 400px;
       height: 350px;
-      background-color: #808080;
+      background-color: $lightgray;
       cursor: pointer;
       position: relative;
 
       &:first-child,
       &:last-child {
-        background-image: url("../img/project1.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
       }
 
+      &:first-child {
+        background-image: url("../img/project1.png");
+      }
+
+      &:last-child {
+        background-image: url("../img/project1.png");
+      }
+
       &:nth-child(2),
       &:nth-child(3) {
-        background-image: url("../img/project2.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+      }
+
+      &:nth-child(2) {
+        background-image: url("../img/weather-app.png");
+      }
+
+      &:nth-child(3) {
+        background-image: url("../img/weather-app.png");
       }
 
       &:hover .grid-overlay {

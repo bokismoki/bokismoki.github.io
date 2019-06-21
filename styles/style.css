@@ -233,23 +233,37 @@ img {
   max-width: 400px;
   width: 400px;
   height: 350px;
-  background-color: #808080;
+  background-color: #e6e6e6;
   cursor: pointer;
   position: relative;
 }
 
 .portfolio .grid__item:first-child, .portfolio .grid__item:last-child {
-  background-image: url("../img/project1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
+.portfolio .grid__item:first-child {
+  background-image: url("../img/project1.png");
+}
+
+.portfolio .grid__item:last-child {
+  background-image: url("../img/project1.png");
+}
+
 .portfolio .grid__item:nth-child(2), .portfolio .grid__item:nth-child(3) {
-  background-image: url("../img/project2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.portfolio .grid__item:nth-child(2) {
+  background-image: url("../img/weather-app.png");
+}
+
+.portfolio .grid__item:nth-child(3) {
+  background-image: url("../img/weather-app.png");
 }
 
 .portfolio .grid__item:hover .grid-overlay {
