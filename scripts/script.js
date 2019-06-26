@@ -1,4 +1,4 @@
-// FIXED NAV AFTER VIEW IS ON PORTFOLIO SECTION
+// NAV AFTER VIEW IS ON PORTFOLIO SECTION
 const nav = document.querySelector(".navigation");
 const hero = document.querySelector(".hero");
 const portfolio = document.querySelector(".portfolio");
@@ -94,7 +94,7 @@ navigationItems.forEach(item => {
 });
 
 
-// PROJECTS FILTER
+// PROJECTS FILTERS
 const filtersBtn = document.querySelectorAll(".filters button");
 const btn1 = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
@@ -162,7 +162,7 @@ hamburger.addEventListener("click", () => {
 
 });
 
-// ANIMATION
+// ANIMATION FOR HERO WELCOME-TEXT
 window.addEventListener("load", () => {
 
     document.querySelector(".hero .welcome-text").style.position = "relative";
