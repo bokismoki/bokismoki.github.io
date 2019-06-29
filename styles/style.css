@@ -254,7 +254,7 @@ img {
 }
 
 .portfolio .grid__item:last-child {
-  background-image: url("../img/project1.png");
+  background-image: url("../img/dashboard.png");
 }
 
 .portfolio .grid__item:hover .grid-overlay {
