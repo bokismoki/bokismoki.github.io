@@ -221,6 +221,7 @@ img {
 
       &:last-child {
         background-image: url("../img/dashboard.png");
+        background-position: left;
       }
 
       &:hover .grid-overlay {

@@ -19,47 +19,37 @@ document.addEventListener("scroll", e => {
     // HERO BOUNDING
     if (positionHero.y <= 0) {
 
+        navigationItems.forEach(item => item.classList.remove("navigation-list__item--active"));
         li1.classList.add("navigation-list__item--active");
-        li2.classList.remove("navigation-list__item--active");
-        li3.classList.remove("navigation-list__item--active");
-        li4.classList.remove("navigation-list__item--active");
 
     }
 
     // PORTFOLIO BOUNDING
     if (positionPortfolio.y <= 10) {
 
+        navigationItems.forEach(item => item.classList.remove("navigation-list__item--active"));
         li2.classList.add("navigation-list__item--active");
-        li1.classList.remove("navigation-list__item--active");
-        li3.classList.remove("navigation-list__item--active");
-        li4.classList.remove("navigation-list__item--active");
 
     }
 
     // ABOUT BOUNDING
     if (positionAbout.y <= 10) {
 
+        navigationItems.forEach(item => item.classList.remove("navigation-list__item--active"));
         li3.classList.add("navigation-list__item--active");
-        li1.classList.remove("navigation-list__item--active");
-        li2.classList.remove("navigation-list__item--active");
-        li4.classList.remove("navigation-list__item--active");
 
     }
 
     // CONTACT BOUNDING
     if (positionContact.y <= 0) {
 
+        navigationItems.forEach(item => item.classList.remove("navigation-list__item--active"));
         li4.classList.add("navigation-list__item--active");
-        li1.classList.remove("navigation-list__item--active");
-        li2.classList.remove("navigation-list__item--active");
-        li3.classList.remove("navigation-list__item--active");
 
     }
 
     // FIX NAV
     const navigationList = document.querySelector(".navigation-list");
-
-    console.log(positionPortfolio);
 
     if (navigationList.className === "navigation-list show" || navigationList.className === "navigation-list") {
 
@@ -93,7 +83,6 @@ navigationItems.forEach(item => {
     });
 });
 
-
 // PROJECTS FILTERS
 const filtersBtn = document.querySelectorAll(".filters button");
 const btn1 = document.querySelector(".btn1");
@@ -109,9 +98,8 @@ filtersBtn.forEach(btn => {
 
         if (e.target.innerText === "ALL") {
 
+            filtersBtn.forEach(btn => btn.classList.remove("filters__btn--active"));
             e.target.classList.add("filters__btn--active");
-            btn2.classList.remove("filters__btn--active");
-            btn3.classList.remove("filters__btn--active");
 
             all.forEach(item => {
                 item.style.display = "block";
@@ -119,9 +107,8 @@ filtersBtn.forEach(btn => {
 
         } else if (e.target.innerText === "HTML/CSS") {
 
+            filtersBtn.forEach(btn => btn.classList.remove("filters__btn--active"));
             e.target.classList.add("filters__btn--active");
-            btn1.classList.remove("filters__btn--active");
-            btn3.classList.remove("filters__btn--active");
 
             html.forEach(item => {
                 item.style.display = "block";
@@ -133,9 +120,8 @@ filtersBtn.forEach(btn => {
 
         } else if (e.target.innerText === "JS") {
 
+            filtersBtn.forEach(btn => btn.classList.remove("filters__btn--active"));
             e.target.classList.add("filters__btn--active");
-            btn1.classList.remove("filters__btn--active");
-            btn2.classList.remove("filters__btn--active");
 
             js.forEach(item => {
                 item.style.display = "block";
@@ -150,7 +136,6 @@ filtersBtn.forEach(btn => {
     });
 
 });
-
 
 // HAMBURGER TOGGLER 
 const hamburger = document.querySelector(".hamburger");
