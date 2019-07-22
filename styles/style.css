@@ -250,7 +250,7 @@ img {
 }
 
 .portfolio .grid__item:nth-child(3) {
-  background-image: url("../img/weather-app.png");
+  background-image: url("../img/board-game.png");
 }
 
 .portfolio .grid__item:last-child {
