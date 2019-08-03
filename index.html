@@ -184,10 +184,10 @@
             <div class="contact-text">
                 <h1 class="h1 wow fadeInRight">Contact</h1>
                 <p class="p">Have a question or want to work together?</p>
-                <form class="form">
-                    <input type="text" class="name" placeholder="Name">
-                    <input type="email" class="email" placeholder="Email">
-                    <textarea cols="30" rows="10" placeholder="Your Message" class="textarea"></textarea>
+                <form class="form" action="https://formspree.io/borisbosnjak084@gmail.com" method="POST">
+                    <input type="text" class="name" name="name" placeholder="Name" required>
+                    <input type="email" class="email" name="email" placeholder="Email" required>
+                    <textarea cols="30" rows="10" name="message" placeholder="Your Message" class="textarea" required></textarea>
                     <button type="submit" class="submit-btn">Submit</button>
                 </form>
             </div>
